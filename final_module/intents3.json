@@ -1,0 +1,186 @@
+{
+    "intents": [
+      {
+        "tag": "greeting",
+        "patterns": ["Hi", "Hello", "Hey", "Good day", "Greetings", "Howdy", "Hi there", "What's up", "Hey there", "Good morning", "Good afternoon", "Good evening", "Hi, folks", "Hey, everyone", "Hello, world", "Yo", "Hiya", "Salutations", "Hi, there!", "How's it going?", "Hey, you!", "Top of the morning to you", "How are you today?", "Hey, friend", "Well met", "Hey, buddy", "Hey, pal", "Hello, there", "Nice to see you", "Hi, stranger", "Hi, neighbor"],
+        "responses": ["Hello! How can I assist you today?", "Hi there! How may I help you?"]
+      },
+      {
+        "tag": "goodbye",
+        "patterns": ["Goodbye", "Farewell", "See you later", "Take care", "Adios", "So long", "Bye for now", "Catch you later", "Until next time", "Goodnight", "Have a great day", "Goodbye, my friend", "See you soon", "Peace out", "Bye-bye", "Later, gator", "Goodbye, take care", "Time to say goodbye", "Have a wonderful day", "I'll be on my way", "Until we meet again", "Adieu", "Sayonara", "Goodbye, my dear", "Fare thee well", "Hasta la vista", "May our paths cross again", "Safe travels", "Godspeed", "Parting is such sweet sorrow"],
+        "responses": ["Goodbye! Feel free to return if you have more questions.", "See you later!"]
+      },
+      {
+        "tag": "thanks",
+        "patterns":["Thanks", "Thank you", "Many thanks", "Much appreciated", "I'm grateful", "I appreciate it", "Thanks a lot", "Thank you very much", "I owe you one", "You're a lifesaver", "I can't thank you enough", "You're too kind", "You've been a great help", "I'm in your debt", "You rock", "I'm so thankful", "I couldn't have done it without you", "You're amazing", "You've made my day", "You're the best", "I'm deeply grateful", "You're a star", "You've been wonderful", "I'm touched by your kindness", "You're a true friend", "You've been a blessing", "You've gone above and beyond", "You're a treasure", "I'm so appreciative", "You're a legend"],
+        "responses": ["You're welcome! If you have more questions, just ask.", "Glad to assist!"]
+      },
+      {
+        "tag": "real_estate",
+        "patterns": [
+          "What is the significance of real estate?",
+          "How does real estate contribute to the economy?",
+          "Tell me about the types of residential properties.",
+          "What are the key features of commercial real estate?",
+          "How does investment in real estate work?",
+          "What factors should I consider when buying a house?",
+          "Can you explain the process of selling a property?",
+          "What are the different forms of property ownership?",
+          "How does the real estate market function?",
+          "What are the pros and cons of renting vs buying?",
+          "What are the key considerations for property investment?",
+          "Tell me about the role of a real estate agent.",
+          "How does real estate development impact communities?",
+          "What is involved in land transactions?",
+          "What factors influence property values?",
+          "How does the real estate industry support economic growth?",
+          "What are the current trends in the real estate market?",
+          "Can you list the advantages of investing in real estate?",
+          "What are the potential disadvantages of real estate investment?",
+          "Significance",
+          "Real estate", "Estate", "estate",
+          "Contribution",
+          "Residential Properties",
+          "Commercial Features",
+          "Investment",
+          "Buying a House",
+          "Selling Process",
+          "Property Ownership",
+          "Market Function",
+          "Renting vs Buying",
+          "Investment Considerations",
+          "Agent Role",
+          "Development Impact",
+          "Land Transactions",
+          "Property Values",
+          "Industry Support",
+          "Market Trends",
+          "Investment Advantages",
+          "Disadvantages"
+        ],
+        "responses": [
+          "Real estate encompasses the buying and selling of land and buildings for various purposes, such as living, business, or investment. It involves the ownership or use rights of tangible properties.",
+          "The real estate market plays a crucial role in the economy, providing housing, supporting businesses, and serving as an investment avenue. Its dynamics are influenced by factors like demand, supply, and economic conditions.",
+          "Residential properties include single-family homes, apartments, condominiums, and townhouses. Each type caters to different housing needs and preferences.",
+          "Commercial real estate comprises properties used for business activities, such as offices, retail spaces, and industrial facilities. It involves leasing or owning spaces for commercial purposes.",
+          "Investing in real estate can be done through direct property ownership, real estate investment trusts (REITs), or other investment vehicles. It offers potential returns through property appreciation and rental income.",
+          "When buying a house, consider factors like location, budget, size, and condition. Conduct thorough inspections and research to make an informed decision.",
+          "Selling a property involves listing, marketing, negotiating, and closing the deal. Pricing, presentation, and market conditions are essential considerations for a successful sale.",
+          "Property ownership can take various forms, including sole ownership, joint tenancy, and tenancy in common. Each has different implications for decision-making and inheritance.",
+          "The real estate market is influenced by factors like supply and demand, interest rates, and economic conditions. Understanding market trends helps buyers and sellers make informed decisions.",
+          "Renting vs buying depends on individual preferences and financial situations. Renting offers flexibility, while buying provides long-term ownership and potential property appreciation.",
+          "Key considerations for property investment include location, market trends, financing options, and potential for rental income or resale profit.",
+          "Real estate agents facilitate property transactions, acting as intermediaries between buyers and sellers. They provide expertise, market knowledge, and assist in the negotiation process.",
+          "Real estate development involves planning, construction, and improvement of properties. It contributes to urbanization, infrastructure development, and economic growth.",
+          "Land transactions include buying, selling, and transferring ownership of land. Legal considerations, zoning regulations, and environmental factors play a role in these transactions.",
+          "Property values are influenced by location, market demand, property condition, and economic factors. Understanding these factors is crucial for buyers, sellers, and investors.",
+          "The real estate industry plays a vital role in economic growth by providing housing, creating jobs, and supporting related sectors such as construction and finance.",
+          "Current trends in the real estate market include sustainable and smart development, technology integration, and changing preferences in housing and workspaces.",
+          "Advantages of real estate investment include potential appreciation, tax benefits, and diversification of investment portfolios.",
+          "Disadvantages of real estate investment may include market fluctuations, property management challenges, and liquidity constraints."
+        ]
+      },
+      {
+        "tag": "website",
+        "patterns": [
+          "What does this website do?",
+          "Can you explain the features of this website?",
+          "Tell me about the purpose of this website.",
+          "Describe the functionality of the website.",
+          "What services does this website offer?",
+          "What is the main focus of this website?",
+          "What can I do on this website?",
+          "Give me an overview of the website's features.",
+          "Tell me about the house prediction feature on this website.",
+          "What is the chatbot function on this website?",
+          "How does the query-based recommendation work on this website?",
+          "What is the name of this website?",
+          "Features",
+          "Functionality",
+          "Services",
+          "Focus",
+          "Overview",
+          "Chatbot",
+          "Recommendation",
+          "Name"
+        ],
+        "responses": [
+          "This website, called Soyiska, consists of three main features: house prediction, chatbot, and query-based recommendation. It aims to provide users with predictive insights related to housing, an interactive chatbot for assistance, and personalized recommendations based on user queries."
+        ]
+      },
+      {
+        "tag": "house_price",
+        "patterns": [
+          "How does house price prediction work?",
+          "Can you explain the process of predicting house prices?",
+          "What techniques are used in house price prediction?",
+          "Tell me about the house price prediction system.",
+          "Explain the working of the software's house price prediction feature.",
+          "House price prediction",
+          "Predicting property prices",
+          "Software's price estimation",
+          "Techniques for house price forecasting",
+          "How does the prediction system function?",
+          "House Prediction"
+        ],
+        "responses": [
+          "The software should include a House Price Prediction System that leverages machine learning techniques, including Ridge Regression, to provide accurate property price estimates. This system should assist users in making well-informed real estate investment decisions."
+        ]
+      },
+      {
+        "tag": "recommendation",
+        "patterns": [
+          "What does a recommendation system do?",
+          "How does a recommendation system work?",
+          "Explain the functionality of a recommendation system.",
+          "Tell me about the purpose of a recommendation system.",
+          "How is a recommendation system implemented?",
+          "Recommendation system",
+          "How does it work?",
+          "What is the role of a recommendation system?",
+          "Query-Based Property Recommendation System"
+        ],
+        "responses": [
+          "The recommendation system is very data-based, and it recommends houses based on user input. The software should incorporate a Query-Based Property Recommendation System, designed to personalize property searches and reduce uncertainty for users. This system, based on user queries, should efficiently guide users toward property options that closely align with their preferences and needs."
+        ]
+      },
+      {
+        "tag": "tech",
+        "patterns": [
+          "What technologies are used in this project?",
+          "Can you list the technologies implemented in this project?",
+          "Tell me about the tech stack of this project.",
+          "Which programming languages are utilized in this project?",
+          "Tech stack",
+          "Project technologies",
+          "Used technologies"
+        ],
+        "responses": [
+          "To build this project, we have used various technologies. For the front-end behavior, we utilized HTML, CSS, and JavaScript. The back-end is powered by Python. Additionally, we incorporated machine learning and neural network technologies for specific functionalities."
+        ]
+      },
+      {
+        "tag": "search_engine",
+        "patterns": [
+          "Search engine",
+          "Tell me about the search engine in this project.",
+          "How does the search engine work?",
+          "Search functionality",
+          "Search engine module"
+        ],
+        "responses": [
+          "Our Customized Search Engine, fueled by the Programmable Search Engine API, has streamlined access to essential real estate data. This module facilitates efficient retrieval of property information from select real estate sources."
+        ]
+      }
+      
+      
+      
+      
+      
+
+      
+      
+    ]
+  }
+  
+  

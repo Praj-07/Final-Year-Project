@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This website is develop for identify the safety of url.">
+    <meta name="keywords" content="phishing url,phishing,cyber security,machine learning,classifier,python">
+    <title>Soyīska</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+   <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+    <!-- bootstrap js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- Awesome font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Custom css -->
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+    
+    <!-- <div class="gcse-search"></div> -->
+</head>
+<body>
+
+<!-- code for bot -->
+<div class="container">
+    <div class="chatbox" style="z-index: 100;  position: fixed; bottom: 20px;">
+        <div class="chatbox__support">
+            <div class="chatbox__header">
+                <div class="chatbox__image--header">
+                    <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" alt="image">
+                </div>
+                <div class="chatbox__content--header">
+                    <h4 class="chatbox__heading--header">Chat support</h4>
+                    <p class="chatbox__description--header">Hi. Soyīska Chat-Bot. How can I help you?</p>
+                </div>
+            </div>
+            <div class="chatbox__messages">
+                <div></div>
+            </div>
+            <div class="chatbox__footer">
+                <input type="text" placeholder="Write a message...">
+                <button class="chatbox__send--footer send__button">Send</button>
+            </div>
+        </div>
+        <div class="chatbox__button">
+            <button><img src="{{ url_for('static', filename='img/chatbox-icon.svg') }}" /></button>
+        </div>
+    </div>
+</div>
+<!-- website -->
+
+     <!-- Navbar section start -->
+    <nav class="navbar navbar-light bg-light navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">Soyīska</a>
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#estate">Real-estate</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#service">Service</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#about">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#comparison">Comparison</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#team">Our Team</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#faq">FAQ</a>
+                </li>
+              </ul>
+              
+              <nav class="navbar bg-t">
+                  <div class="container-fluid">
+                  <div class="gcse-search"></div>
+                    <!-- <form class="d-flex" role="search">
+                      <input class="form-control me-2" type="search" placeholder="Eg. Pune" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form> -->
+                  </div>
+                </nav>
+            </div>
+          </div>
+      </nav>
+    
+    <!-- Navbar section end-->
+
+    <!-- home section start -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/static/img/hero1.jpg" class="d-block w-100" alt="House Interior">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Welcome to Soyīska, Your Real Estate Companion!</h5>
+            <!-- <p>Some representative placeholder content for the first slide.</p> -->
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/static/img/hero3.jpg" class="d-block w-100" alt="House Interior">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Discover a Smarter Way to Navigate Real Estate</h5>
+            <!-- <p>Some representative placeholder content for the second slide.</p> -->
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/static/img/hero2.jpg" class="d-block w-100" alt="House Interior">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Empowering Your Real Estate Journey</h5>
+            <!-- <p>Some representative placeholder content for the third slide.</p> -->
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <section class="d-none">
+      <div id="home" class="carousel slide " data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <!-- <img src="/static/img/home1.jpg" class="d-block w-q00 w-100-height" alt="living room"> -->
+            <div class="carousel-caption">
+              <!-- <h5>Discover Property <br> More Easily</h5> -->
+
+              <!-- <form class="d-flex justify-content-center"> -->
+                <!-- <input class="form-control me-2 m-5" type="search" placeholder="Eg. Pune" aria-label="Search">
+                <button class="btn btn-light m-5 " type="submit">Search</button> -->
+                <!-- <script async src="https://cse.google.com/cse.js?cx=6433fb9e2e30a469a">
+                </script>
+                <div class="gcse-search"></div> -->
+                  
+              <!-- </form> -->
+              <!-- <button class="btn btn-light btn-sm justify-content-md-end mx-2 px-3">
+                <i class="fas fa-search"></i> Search
+              </button> -->
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/static/img/home1.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/static/img/home2.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- home section end -->
+<!-- real estate -->
+<section id="estate">
+  <div class="container mt-5 pt-5 text-dark">
+      <!-- <h1 class="text-center">About Soyīska</h1> -->
+      <h1 class="text-center text-secondary m-5">About Real-estate</h1>
+      <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+      <div class="row align-items-center justify-content-between">
+          
+          
+          <div class="col-md p-5">
+              <h5 class="text-primary">What is Real-Estate?</h5>
+              <!-- <h2>How Soyīska uses Machine Learning to Predict House Prices</h2> -->
+              <p>Real estate encompasses physical property, including land, buildings, and natural resources, used for various purposes such as residential, commercial, and industrial activities. It is a vital component of the economy and plays a significant role in people's lives.</p>
+              <ul>
+                <li><strong>Residential Real Estate:</strong> This category includes properties like houses, apartments, and condominiums, designed for individuals and families to live in.</li>
+                <li><strong>Commercial Real Estate:</strong> Commercial properties are used for business activities, such as office spaces, retail stores, and industrial facilities. </li>
+                <li><strong>Industrial Real Estate:</strong> Industrial properties are designed for manufacturing, warehousing, and distribution operations. </li>
+
+              </ul>
+
+
+              <a href="https://www.bankrate.com/real-estate/what-is-real-estate/" class="btn btn-dark mt-3">
+                 <i class="bi bi-chevron-right"></i>  Read More
+              </a>
+          </div>
+
+          <div class="col-md">
+            <img src="/static/img/real-estate.jpg" class="img-fluid mb-3 h-75" alt="">
+            <!-- <img src="/static/img/uml.png" class="img-fluid align-middle" alt=""> -->
+        </div>
+      </div>
+  </div>
+</section>
+<!-- real estate -->
+
+    <!-- Service section starts -->
+    <section class="p-5" id="service">
+      <div class="container text-center ">
+        <h1 class="text-center text-secondary m-5">Services Offered by <span class="text-warning">Soyīska</span></h1>
+        <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+        <div class="row p-3">
+          
+          <div class="col-md">
+            <div class="card border-0 shadow text-center my-3" style="width: 25rem;">
+              <img src="/static/img/house-recommendation.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Recommendation</h5>
+                <p class="card-text">Using query-based recommendation, our system helps you discover your ideal home by considering your preferences and requirements</p>
+                <a href="{{url_for('recommendation')}}" class="btn btn-primary">Try it out</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md">
+            <div class="card border-0 shadow text-center my-3" style="width: 25rem;">
+              <img src="/static/img/house_price.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Price Prediction</h5>
+                <p class="card-text">Our machine learning-powered house price prediction feature, providing you with valuable insights for making informed real estate decisions.</p>
+                <a href="{{url_for('price')}}" class="btn btn-primary">Try it out</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md">
+            <div class="card border-0 shadow text-center my-3" style="width: 25rem;">
+              <img src="/static/img/bot.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Chat-Bot</h5>
+                <p class="card-text">Simplify your journey to find your dream home with our user-friendly Rasa chatbot, ready to help you with all your real estate queries.</p>
+                <!-- <a href="{{url_for('recommendation')}}" class="btn btn-primary">Try it out</a> -->
+              </div>
+            </div>
+          </div>
+
+            <!-- <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-card-list"></i>
+                </div>
+                <h3 class="card-title mb-3">Recommendation</h3>
+                <p class="card-text"> Using query-based recommendation, our system helps you discover your ideal home by considering your preferences and requirements</p>
+                <a href="{{url_for('recommendation')}}" class="btn btn-outline-warning">Try it out</a>
+              </div>
+            </div> 
+          <div class="col-md">
+            <div class="card bg-secondary text-light">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-house-check-fill"></i>
+                </div>
+                <h3 class="card-title mb-3">Price Prediction</h3>
+                <p class="card-text"> Our machine learning-powered house price prediction feature, providing you with valuable insights for making informed real estate decisions</p>
+                <a href="{{url_for('price')}}" class="btn btn-outline-light">Try it out</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-robot"></i>
+                </div>
+                <h3 class="card-title mb-3">Bot</h3>
+                <p class="card-text"> Simplify your journey to find your dream home with our user-friendly Rasa chatbot, ready to help you with all your real estate queries.</p>
+                <a href="{{url_for('recommendation')}}" class="btn btn-outline-warning">Try it out</a>
+              </div>
+            </div>
+          </div>-->
+
+        </div>
+      </div>
+    </section>   
+    <!-- Service section ends  -->
+
+
+
+<!-- About section start -->
+<section id="about">
+  <div class="container mt-5 pt-5 text-dark">
+      <!-- <h1 class="text-center">About Soyīska</h1> -->
+      <h1 class="text-center text-secondary m-5">About Soyīska</h1>
+      <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+      <div class="row align-items-center justify-content-between">
+          <div class="col-md">
+              <img src="/static/img/tech1.jpg" class="img-fluid mb-3 h-75" alt="">
+              <!-- <img src="/static/img/uml.png" class="img-fluid align-middle" alt=""> -->
+          </div>
+          
+          <div class="col-md p-5">
+              <h5 class="text-primary">How Soyīska Works</h5>
+              <h2>How Soyīska uses Machine Learning to Predict House Prices</h2>
+              <ul>
+                  <li><strong>Project Objective:</strong>Soyīska is an innovative platform with a mission to revolutionize your real estate experience. Our primary objective is to provide you with a one-stop solution for property-related needs. We integrate three core features: property recommendations, house price predictions, and a Rasa-powered chatbot.</li> <br>
+
+                  <li><strong>Data Source:</strong>The project uses a publicly available dataset from Kaggle, specifically the <a href="https://www.kaggle.com/code/saipavansaketh/pune-house-price-prediction/input?select=Pune+house+data.csv">"Pune House Price Data"</a> dataset.This dataset contains attributes like area type, availability, size, society, total square footage (sqft), number of bathrooms (bath), balconies (balcony), and price. This data serves as the foundation for our machine learning models.</li> <br>
+
+                  <li><strong>Machine Learning Algorithms:</strong>The project employs Three machine learning algorithms:
+                      <ul><li>Linear Regression</li></ul>
+                      <ul><li>Ridge Regression</li></ul>
+                      <ul><li>Lasso Regression</li></ul>
+                      These algorithms undergo rigorous training using the dataset's insights to offer reliable property price estimates.</li> <br>
+
+                  <li><strong>Algorithm Performance:</strong>Among the three algorithms, the <strong class="text-warning">Ridge Regression</strong> stands out with an impressive accuracy rate of <strong class="text-warning">88.7%.</strong>
+                     This performance ensures that our house price predictions are not only accurate but also a dependable guide for property investments.</li> <br>
+
+                  <li><strong>Conclusion:</strong>At Soyīska, we bring together the power of artificial intelligence, data, and user-friendly features to simplify your real estate journey. Whether you're searching for your dream property, estimating house prices, or seeking instant support via our Rasa chatbot, we're here to enhance your real estate experience.</li> <br>
+              </ul>
+              <a href="#" class="btn btn-dark mt-3">
+                 <i class="bi bi-chevron-right"></i>  Read More
+              </a>
+
+          </div>
+      </div>
+  </div>
+</section>
+<!-- About section end -->
+
+
+
+<!-- Comparison section -->
+<section id="comparison">
+  <div class="container mt-5 pt-5 text-dark">
+      <!-- <h1 class="text-center">About Soyīska</h1> -->
+      <h1 class="text-center text-secondary m-5">Comparison</h1>
+      <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+      <div class="row align-items-center justify-content-between">
+          
+          
+          <div class="col-md p-5">
+              <h5 class="text-primary">Why Choose Soyīska Over Conventional Real Estate Platforms?</h5>
+              <!-- <h2>How Soyīska uses Machine Learning to Predict House Prices</h2> -->
+              <p>Traditional real estate platforms like Zillow, Realtor.com, and Trulia have been the go-to options for property seekers. While they offer a range of property listings, they often lack the personal touch and advanced features that Soyīska brings to the table.</p>
+              <ul>
+                <li><strong> Personalized Recommendations:</strong> Soyīska's Property Recommendation System uses advanced machine learning to personalize your property search. Conventional platforms lack this tailored approach.</li>
+                <li><strong>Accurate Price Predictions:</strong> Soyīska's House Price Prediction System, with 88% accuracy, outperforms traditional platforms. </li>
+                <li><strong>Instant Chat Support:</strong> Soyīska's Rasa-powered chatbot provides 24/7 assistance, which conventional platforms may lack. </li>
+                <li><strong>Efficient Data Retrieval:</strong> Soyīska's Customized Search Engine, powered by Programmable Search API, offers seamless access to property data, setting it apart from the competition.</li>
+                <li><strong>Innovation and Customization:</strong> Soyīska's innovative and user-centric approach ensures your real estate journey is simplified and personalized, a level of service you won't find on traditional platforms. </li>
+              </ul>
+
+          </div>
+
+          <div class="col-md">
+            <img src="/static/img/City.jpg" class="img-fluid mb-3 h-75" alt="">
+            <!-- <img src="/static/img/uml.png" class="img-fluid align-middle" alt=""> -->
+        </div>
+      </div>
+  </div>
+</section>
+<!-- Comparison section -->
+
+
+
+<!-- Team section -->
+<section id="team" class="bg-light py-3 py-md-5 py-xl-8">
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+        <h1 class="text-center text-secondary m-5">Our Team</h1>
+        <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+      </div>
+    </div>
+  </div>
+
+  <div class="container overflow-hidden">
+    <div class="row gy-4 gy-lg-0 gx-xxl-5 justify-content-md-center">
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
+          <div class="card-body p-0">
+            <figure class="m-0 p-0">
+              <img class="img-fluid" src="/static/img/test.jpg" alt="">
+              <figcaption class="m-0 p-4">
+                <h4 class="mb-1">Amisha Gotarne</h4>
+                <p class="text-secondary mb-0">Software Developer</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
+          <div class="card-body p-0">
+            <figure class="m-0 p-0">
+              <img class="img-fluid" src="/static/img/test.jpg" alt="">
+              <figcaption class="m-0 p-4">
+                <h4 class="mb-1">Amisha Gotarne</h4>
+                <p class="text-secondary mb-0">Software Developer</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
+          <div class="card-body p-0">
+            <figure class="m-0 p-0">
+              <img class="img-fluid" src="/static/img/test.jpg" alt="">
+              <figcaption class="m-0 p-4">
+                <h4 class="mb-1">Amisha Gotarne</h4>
+                <p class="text-secondary mb-0">Software Developer</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <br>
+    <div class="row gy-4 gy-lg-0 gx-xxl-5 justify-content-md-center">
+        
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
+          <div class="card-body p-0">
+            <figure class="m-0 p-0">
+              <img class="img-fluid" src="/static/img/test.jpg" alt="">
+              <figcaption class="m-0 p-4">
+                <h4 class="mb-1">Amisha Gotarne</h4>
+                <p class="text-secondary mb-0">Software Developer</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
+          <div class="card-body p-0">
+            <figure class="m-0 p-0">
+              <img class="img-fluid" src="/static/img/test.jpg" alt="">
+              <figcaption class="m-0 p-4">
+                <h4 class="mb-1">Amisha Gotarne</h4>
+                <p class="text-secondary mb-0">Software Developer</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Team section -->
+
+
+
+<!-- FAQ Section Starts -->
+          
+<section class="p-5" id="faq">
+  <div class="container">
+  <!-- <h3 class="text-center mb-4 pb-2 text-primary fw-bold">FAQ</h3> -->
+  <h1 class="text-center text-secondary m-5">FAQ</h1>
+  <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+  <p class="text-center mb-5">
+    Find the answers for the most frequently asked questions below
+  </p>
+
+  <div class="row">
+    <div class="col-md-6 col-lg-4 mb-4">
+      <h6 class="mb-3 text-primary"><i class="far fa-paper-plane text-primary pe-2"></i>What is Soyīska?</h6>
+      <p>
+        <strong>Soyīska</strong> is a Estate AI Assistant comprehensive platform designed to assist you in your real estate journey. It incorporates features such as query-based recommendations, house price predictions, and a chatbot for instant support.
+      </p>
+    </div>
+  
+    <div class="col-md-6 col-lg-4 mb-4">
+      <h6 class="mb-3 text-primary"><i class="fas fa-pen-alt text-primary pe-2"></i>What do Soyīska offer?</h6>
+      <p><strong>Soyīska</strong> offers tailored property recommendations, accurate price predictions, and 24/7 support via an AI-powered chatbot, all designed to streamline your property search and decision-making process..
+      </p>
+    </div>
+
+    <div class="col-md-6 col-lg-4 mb-4">
+      <h6 class="mb-3 text-primary"><i class="fas fa-user text-primary pe-2"></i>What is real estate?
+      </h6>
+      <p>Real estate comprises land and property, used for living, working, or investment, and includes residential, commercial, and industrial spaces. It plays a pivotal role in various aspects of our lives, from housing to business operations.
+      </p>
+    </div>
+
+         
+    
+    
+    <div class="row">
+      <div class="col-md-6 col-lg-4 mb-4">
+        <h6 class="mb-3 text-primary"><i class="fas fa-user text-primary pe-2"></i>How does the query-based recommendation system work?
+        </h6>
+        <p>Our recommendation system uses advanced algorithms to analyze your preferences and criteria, helping you find properties that match your dream home requirements.
+        </p>
+      </div>
+      
+      
+      <div class="col-md-6 col-lg-4 mb-4">
+        <h6 class="mb-3 text-primary"><i class="fas fa-pen-alt text-primary pe-2"></i>How can the chatbot assist me in my real estate search?</h6>
+        <p>Our Rasa-powered chatbot is here to answer your questions, provide information about properties, and assist you with any queries related to real estate.
+        </p>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mb-4">
+        <h6 class="mb-3 text-primary"><i class="far fa-paper-plane text-primary pe-2"></i>How accurate is the house price prediction feature?</h6>
+        <p>Our machine learning-based price prediction is designed to provide estimates with a high degree accuracy of 88%. However, it's essential to keep in mind that these are estimates and may vary.
+        </p>
+      </div>
+    
+      
+  </div>
+</div>
+</section>
+<!-- FAQ Section Ends -->
+
+
+<!-- contact us section  -->
+<!-- About section start -->
+<section id="about">
+  <div class="container mt-5 pt-5 text-dark">
+      <!-- <h1 class="text-center">About Soyīska</h1> -->
+      <h1 class="text-center text-secondary m-5">Contact Us</h1>
+      <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+      <div class="row align-items-center justify-content-between">
+          <div class="col-md">
+              <img src="/static/img/contact.jpg" class="img-fluid mb-3 h-75" alt="">
+              <!-- <img src="/static/img/uml.png" class="img-fluid align-middle" alt=""> -->
+          </div>
+          
+          <!-- <div class="col-md p-5"> -->
+            <div class="col-md-6 p-5">
+              <div class="card border-0 shadow w-75 h-100 contact text-center my-0">
+                  <form class="text-center border border-light p-5" target="_blank" action="https://formsubmit.co/b8cee591121b6b39e26766f4c12ee6a5" method="POST">
+                      <p class="h4 mb-4">Get in Touch with us.</p>
+                      <div class="form-group">
+                        <div class="form-row">
+                          <div class="col">
+                            <input type="text" name="name" class="form-control mb-4" placeholder="Full Name" required>
+                          </div>
+                          <div class="col">
+                            <input type="email" name="email" class="form-control mb-4" placeholder="Email Address" required>
+                          </div>
+                          <div class="col">
+                              <input type="tel" name="number" class="form-control mb-4" placeholder="Contact Number" required>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <textarea placeholder="Your Message" class="form-control rounded-1" name="message" id="Message" rows="5" required></textarea>
+                      </div>
+                      <button type="submit" class="btn btn-secondary mt-4 shadow-none">Submit Form</button>  
+                  </form>
+              </div>
+          <!-- </div -->
+          </div>
+      </div>
+  </div>
+</section>
+<!-- contact us section  -->
+
+
+
+
+  <!-- Footer secction starts-->
+
+  <footer class="bg-light text-center text-lg-start position-relative">
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2023 Copyright:
+      <span>Soyīska Developed By Amisha By ProTech.</span>
+
+    <a href="#" class="position-absolute bottom-0 end-0 p-1">
+      <i class="bi bi-arrow-up-circle h1"></i>
+    </a>
+
+    </div>
+    
+    <!-- Copyright -->
+  </footer>
+
+<!-- <footer class="p-5 bg-dark text-white text-center position-relative">
+  <div class="container">
+      <p class="lead"><strong>Soyīska</strong> develop by <strong>Amisha</strong> form <strong>ProTech</strong></p>
+
+      <a href="#" class="position-absolute bottom-0 end-0 p-5">
+          <i class="bi bi-arrow-up-circle h1"></i>
+      </a>
+  </div>
+</footer> -->
+  <!-- Footer secction ends-->
+
+
+
+<!-- Programmable Search Engine -->
+<script async src="https://cse.google.com/cse.js?cx=6433fb9e2e30a469a"></script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script>
+    $SCRIPT_ROOT = {{ request.script_root|tojson }};
+</script>
+<script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+Flask
+gunicorn
+itsdangerous
+Jinja2
+Werkzeug
+numpy
+scipy
+scikit-learn
+matplotlib
+pandas>
+num2words
+indic-num2words 
+flask_sqlalchemy
